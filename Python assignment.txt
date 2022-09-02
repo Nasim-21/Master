@@ -1,0 +1,29 @@
+For LOOP---
+sum = 0
+for n in range (1, 200):
+     count = 0
+     t = n//2
+     for i in range(2, (t + 1)):
+         if(n % i == 0):
+             count = count + 1
+             break
+     if (count == 0 and n > 1):
+         print(" %d" %n, end = ' ')
+         sum = sum + n
+print("\n\nSum from 1 to 200 = %d" %(sum))
+
+Range function--
+import  math
+def is_prime(n):
+    if n == 2:
+        return True
+    if n % 2 == 0 or n <= 1:
+        return False
+
+    sqr = int(math.sqrt(n)) + 1
+
+    for divisor in range(3, sqr, 2):
+        if n % divisor == 0:
+            return False
+    return True
+print([i for i in range(200) if is_prime(i)])
